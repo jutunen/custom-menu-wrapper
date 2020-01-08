@@ -14,11 +14,12 @@ Component features include:
 ## Usage
 - create a menu heading container by assigning a heading class to it
 - create menu item containers by assigning item classes to them
+- add style to container classes
 - add content inside the containers
 - wrap the containers inside a custom menu component
 - dispatch menuClose events from within the menu items if necessary
 
-Example:
+HTML Example:
 
  ```html
      <custom-menu-wrapper>
@@ -28,6 +29,35 @@ Example:
         <div class='item'> 3rd item </div>
      </custom-menu-wrapper>    
  ```
+ 
+ Style example:
+ 
+ ```css
+   .item, .heading {
+    background-color: lightblue;
+    display: none;
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item:hover {
+    background: white;
+    cursor: default;
+  }
+
+  .heading {
+    background-color: #63b4cf;
+  }
+ ```
+Value none should be assigned as an initial display style for the containers.
+
+The component will change the display style to flex during component initialization.
+
+Thus container contents should be considered as flex items when styling them.
+
+In the example above, the content is centered as flex items with align-items and justify-content directives.
 
 ## Custom attributes
 
