@@ -72,3 +72,40 @@ Defines new item class name, if the default class name 'item' can not be used.
 
 Defines new heading class name, if the default class name 'heading' can not be used.
 
+## Closing the menu
+
+Following events cause menu closing:
+
+ * click outside menu items (click mode only)
+ * click on the heading
+ * hover outside menu items for longer than menu-close-timeout (hover mode only)
+ * menuClose or rootMenuClose event is dispatched from within a menu item
+
+#### Dispatching menuClose event
+
+  menuClose event closes the menu that contains the item from within the event originated from.
+
+  example:
+
+```javascript
+  var element = getElementById("elemId")
+  element.dispatchEvent(new CustomEvent('menuClose', {bubbles: true}))
+```
+
+  In the example above, the element must be a descendant of menu item element.
+  Remember to set the 'bubbles:true' object parameter on CustomEvent.
+
+#### Dispatching rootMenuClose event
+
+  rootMenuClose event closes the root menu that contains the submenu that contains the item from within the event originated from.
+
+  rootMenuClose event closes the menu also if it there are no submenus at all.
+
+example:
+
+```javascript
+  var element = getElementById("elemId")
+  element.dispatchEvent(new CustomEvent('rootMenuClose'))
+```
+
+  In the example above, the element must be a descendant of menu item element. Unlike in the case of menuClose event, there is no need for second parameter on CustomEvent. 
