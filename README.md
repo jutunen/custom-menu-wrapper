@@ -53,7 +53,7 @@ HTML Example:
  ```
 Value none should be assigned as an initial display style for the containers.
 
-The component will change the display style to flex during component initialization.
+The component will change the container display style to flex during component initialization.
 
 Thus container contents should be considered as flex items when styling them.
 
