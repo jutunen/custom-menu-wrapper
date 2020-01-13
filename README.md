@@ -53,11 +53,65 @@ HTML Example:
  ```
 Value none should be assigned as an initial display style for the containers.
 
-The component will change the container display style to flex during component initialization.
+Component will change the container display style to flex during component initialization.
 
-Thus container contents should be considered as flex items when styling them.
+Container contents should be considered as flex items when styling them.
 
 In the example above, the content is centered as flex items with align-items and justify-content directives.
+
+## Including the component to an HTML file
+
+1. Import polyfill, this is not needed for modern browsers:
+
+    ```html
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.2.4/custom-elements.min.js"></script>
+    ```
+
+2. Import custom element:
+
+    ```html
+    <script defer src='custom-menu-wrapper.min.js'></script>
+    ```
+
+3. Start using it!
+
+    ```html
+     <custom-menu-wrapper>
+        <div class='heading'> Menu </div>
+        <div class='item'> 1st item </div>
+     </custom-menu-wrapper>    
+    ```
+## Including the component from NPM
+
+1. Install and import polyfill, this is not needed for modern browsers:
+
+   See https://www.npmjs.com/package/@webcomponents/custom-elements
+
+2. Install custom-menu-wrapper NPM package:
+
+    ```console
+    npm i custom-menu-wrapper
+    ```
+
+3. Import custom element:
+
+    ```javascript
+    import 'custom-menu-wrapper'
+    ```
+
+4. Start using it:
+
+   ```javascript
+   var menu = document.createElement('custom-menu-wrapper')
+   var heading = document.createElement('div')
+   var item = document.createElement('div')
+   heading.classList.add('heading')
+   item.classList.add('item')
+   menu.appendChild(menu)
+   menu.appendChild(heading)
+   document.body.appendChild(menu)
+   ```
+
 
 ## Custom attributes
 
@@ -106,10 +160,10 @@ Defines new heading class name, if the default class name 'heading' can not be u
 
 Following events cause menu closing:
 
- * click outside menu items (click mode only)
- * click on the heading
- * hover outside menu items for longer than menu-close-timeout (hover mode only)
- * menuClose or rootMenuClose event is dispatched from within a menu item
+ * click outside menu items (on click mode only)
+ * click on the heading (on click mode only)
+ * hover outside menu items or heading for longer than menu-close-timeout (on hover mode only)
+ * menuClose or rootMenuClose event is dispatched from menu item or its descentant
 
 #### Dispatching menuClose event
 
@@ -122,7 +176,7 @@ Following events cause menu closing:
   element.dispatchEvent(new CustomEvent('menuClose', {bubbles: true}))
 ```
 
-  In the example above, the element must be a descendant of menu item element.
+  In the example above, the element must be a menu item or its descentant.
   Remember to set the 'bubbles:true' object parameter on CustomEvent.
 
 #### Dispatching rootMenuClose event
