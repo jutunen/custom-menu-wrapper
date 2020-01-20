@@ -1,4 +1,4 @@
-# custom-menu-wrapper
+https://github.com/jutunen/wac-exercises/tree/master/car-mileage# custom-menu-wrapper
 A web component that wraps HTML elements and forms a drop-down menu out of them.
 
 ## Features
@@ -8,7 +8,7 @@ Component features include:
 - content agnostic: menu items should be able to contain any HTML
 - nestable: allows creating of versatile menu-submenu structures
 - menu "drop" directions: down or right
-- initial menu positions: bottom or right
+- initial menu item positions: bottom or right
 - menu toggling methods: click or hover
 
 ## Usage
@@ -51,13 +51,13 @@ HTML Example:
     background-color: #63b4cf;
   }
  ```
-Value none should be assigned as an initial display style for the containers.
+Value *none* should be assigned as an initial display style for the containers.
 
-Component will change the container display style to flex during component initialization.
+Component will change the container display style to *flex* during component initialization.
 
 Container contents should be considered as flex items when styling them.
 
-In the example above, the content is centered as flex items with align-items and justify-content directives.
+In the example above, the content is centered as flex items with *align-items* and *justify-content* directives.
 
 ## Including the component to an HTML file
 
@@ -177,19 +177,29 @@ HTML example:
 
 This attribute applies only when menu is in hover mode.
 
-Attribute value defines how long the menu will be open after the pointer is not above the menu anymore.
+Attribute value defines how many milliseconds the menu will be open after the pointer is not above the menu anymore.
 
-Attribute's unit is milliseconds and default value is 500.
+Default value is 500.
 
 HTML example:
 
 ```html
-<custom-menu-wrapper closing-delay='0'>
+<custom-menu-wrapper closing-delay='1000'>
 ```
 
 #### close-submenus-on-closing
 
 Defines whether the submenus will be closed when the menu is closed by custom event or by losing focus.
+
+Attribute value must be either 'true' or 'false'.
+
+Default value is 'true'.
+
+HTML example:
+
+```html
+<custom-menu-wrapper close-submenus-on-closing='false'>
+```
 
 #### close-submenus-on-heading-click
 
