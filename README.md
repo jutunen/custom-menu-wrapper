@@ -283,6 +283,20 @@ example:
 
   In the example above, the element must be a descendant of menu item element. Unlike in the case of menuClose event, there is no need for second parameter on CustomEvent. 
 
+## Adding and removing items
+
+If component has not been added to DOM, items can be added with appendChild() method.
+
+Items can be added with appendChild() method, if the component has not been added to DOM.
+
+If component has been added to DOM, items should be added with addItem() method.
+
+Items should be added with addItem() method, if the component has been added to DOM.
+
+You can use document.getElementById() and document.querySelector() methods to get the item to be removed and then remove it with
+
+
+
 ## Methods
 
 ### addItem( element, index )
