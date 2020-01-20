@@ -175,7 +175,7 @@ HTML example:
 
 ### closing-delay
 
-This attribute applies only when menu is in hover mode.
+This attribute applies only when the menu is in hover mode.
 
 Attribute value defines how many milliseconds the menu will be open after the pointer is not above the menu anymore.
 
@@ -249,7 +249,7 @@ Defines new heading class name, if the default class name 'heading' can not be u
 
 Following events cause menu closing:
 
- * click outside menu items (on click mode only)https://github.com/jutunen/wac-exercises/tree/master/car-mileage
+ * click outside menu items (on click mode only)
  * click on the heading (on click mode only)
  * hover outside menu items or heading for longer than menu-close-timeout (on hover mode only)
  * menuClose or rootMenuClose event is dispatched from menu item or its descentant
