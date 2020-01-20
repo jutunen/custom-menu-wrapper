@@ -129,9 +129,9 @@ Default value is 'click'.
 
 HTML example:
 
-    ```html
-     <custom-menu-wrapper mode='hover'>
-    ```
+```html
+<custom-menu-wrapper mode='hover'>
+```
 
 #### position
 
@@ -143,9 +143,9 @@ Default value is 'bottom'.
 
 HTML example:
 
-    ```html
-     <custom-menu-wrapper position='right'>
-    ```
+```html
+<custom-menu-wrapper position='right'>
+```
 
 #### direction
 
@@ -157,9 +157,9 @@ Default value is 'down'.
 
 HTML example:
 
-    ```html
-     <custom-menu-wrapper direction='right'>
-    ```
+```html
+<custom-menu-wrapper direction='right'>
+```
 
 #### init-state-open
 
@@ -169,9 +169,9 @@ This attribute is a boolean attribute, also known as a valueless attribute.
 
 HTML example:
 
-    ```html
-     <custom-menu-wrapper init-state-open>
-    ```
+```html
+<custom-menu-wrapper init-state-open>
+```
 
 #### closing-delay
 
@@ -183,9 +183,9 @@ Attribute's unit is milliseconds and default value is 500.
 
 HTML example:
 
-    ```html
-     <custom-menu-wrapper closing-delay='0'>
-    ```
+```html
+<custom-menu-wrapper closing-delay='0'>
+```
 
 #### close-submenus-on-closing
 
