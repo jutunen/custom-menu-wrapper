@@ -14,7 +14,7 @@ Component features include:
 ## Usage
 - create a menu heading container by assigning a heading class to it
 - create menu item containers by assigning item classes to them
-- add style to container classes
+- add style to classes
 - add content inside the containers
 - wrap the containers inside a custom menu component
 - dispatch menuClose events from within the menu items if necessary
@@ -115,7 +115,7 @@ In the example above, the content is centered as flex items with *align-items* a
    ```
 
 
-## Custom attributes
+## Attributes
 
 ### mode
 
@@ -282,3 +282,19 @@ example:
 ```
 
   In the example above, the element must be a descendant of menu item element. Unlike in the case of menuClose event, there is no need for second parameter on CustomEvent. 
+
+## Methods
+
+### addItem( element, index )
+
+Adds new menu item container. The element parameter must be a div element that contains the actual item content. The index parameter defines the place of the new item to be added. Index 0 adds item as first. If index parameter is omitted, item is added as last.
+
+This method can be used only if the component is in initialized state. This method can be used only when the component has been added to DOM.
+
+### deleteItem( param )
+
+Removes menu item container from menu. If param type is string, param is considered to be the id of the element container to be removed. If param type is number, param is considered to be the ordinal index of the element container to be removed.
+
+This method can be used only if the component is in initialized state. This method can be used only when the component has been added to DOM.
+
+If param is omitted, the last item container shall be removed.
