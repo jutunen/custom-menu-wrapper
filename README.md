@@ -205,9 +205,37 @@ HTML example:
 
 Defines whether the submenus will be closed when the menu is closed by heading click.
 
+Attribute value must be either 'true' or 'false'.
+
+Default value is 'true'.
+
+HTML example:
+
+```html
+<custom-menu-wrapper close-submenus-on-heading-click='false'>
+```
+
 ### heading-class
 
-Defines the name of the class that shall be assigned to the heading when the menu is open.
+Defines the name of the class that shall be assigned to heading when the menu is opened.
+
+The class shall be removed from heading when the menu is closed.
+
+This attribute can be used to change the heading style when the menu is toggled.
+
+CSS example:
+ 
+ ```css
+  .menu-open-heading {
+    background-color: #black;
+    color:white;
+  }
+ ```
+HTML example:
+
+```html
+<custom-menu-wrapper heading-class='menu-open-heading'>
+```
 
 ### item
 
@@ -221,7 +249,7 @@ Defines new heading class name, if the default class name 'heading' can not be u
 
 Following events cause menu closing:
 
- * click outside menu items (on click mode only)
+ * click outside menu items (on click mode only)https://github.com/jutunen/wac-exercises/tree/master/car-mileage
  * click on the heading (on click mode only)
  * hover outside menu items or heading for longer than menu-close-timeout (on hover mode only)
  * menuClose or rootMenuClose event is dispatched from menu item or its descentant
