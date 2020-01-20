@@ -189,11 +189,15 @@ HTML example:
 
 ### close-submenus-on-closing
 
+This attribute applies only when the menu is in click mode.
+
 Defines whether the submenus will be closed when the menu is closed by custom event or by losing focus.
 
 Attribute value must be either 'true' or 'false'.
 
 Default value is 'true'.
+
+Higher level attribute setting overriddes submenu attribute settings when menu is closed due to losing focus.
 
 HTML example:
 
