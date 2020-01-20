@@ -19,7 +19,7 @@ Component features include:
 - wrap the containers inside a custom menu component
 - dispatch menuClose events from within the menu items if necessary
 
-HTML Example:
+HTML example:
 
  ```html
      <custom-menu-wrapper>
@@ -251,14 +251,14 @@ Following events cause menu closing:
 
  * click outside menu items (on click mode only)
  * click on the heading (on click mode only)
- * hover outside menu items or heading for longer than menu-close-timeout (on hover mode only)
+ * hover outside menu items or heading for longer than closing-delay time (on hover mode only)
  * menuClose or rootMenuClose event is dispatched from menu item or its descentant
 
 #### Dispatching menuClose event
 
   menuClose event closes the menu that contains the item from within the event originated from.
 
-  example:
+  Example:
 
 ```javascript
   var element = getElementById("elemId")
@@ -274,7 +274,7 @@ Following events cause menu closing:
 
   rootMenuClose event closes the menu also if it there are no submenus at all.
 
-example:
+Example:
 
 ```javascript
   var element = getElementById("elemId")
@@ -283,19 +283,17 @@ example:
 
   In the example above, the element must be a descendant of menu item element. Unlike in the case of menuClose event, there is no need for second parameter on CustomEvent. 
 
-## Adding and removing items
+## Adding and removing menu items
 
-If component has not been added to DOM, items can be added with appendChild() method.
+If component has not been added to DOM, new items can be added with HTML DOM appendChild() method.
 
-Items can be added with appendChild() method, if the component has not been added to DOM.
+If component has been added to DOM, new items must be added with component's addItem() method, see documentation below.
 
-If component has been added to DOM, items should be added with addItem() method.
+Items can be removed from the component by using HTML DOM ChildNode.remove() method.
 
-Items should be added with addItem() method, if the component has been added to DOM.
+You can use document.getElementById() or document.querySelector() methods to get the item element and then remove it with its own remove() method.
 
-You can use document.getElementById() and document.querySelector() methods to get the item to be removed and then remove it with
-
-
+If component has been added to DOM, items can be removed also with components deleteItem() method, see documentation below.
 
 ## Methods
 
@@ -303,12 +301,13 @@ You can use document.getElementById() and document.querySelector() methods to ge
 
 Adds new menu item container. The element parameter must be a div element that contains the actual item content. The index parameter defines the place of the new item to be added. Index 0 adds item as first. If index parameter is omitted, item is added as last.
 
-This method can be used only if the component is in initialized state. This method can be used only when the component has been added to DOM.
+This method can be used only when the component has been added to DOM.
 
 ### deleteItem( param )
 
-Removes menu item container from menu. If param type is string, param is considered to be the id of the element container to be removed. If param type is number, param is considered to be the ordinal index of the element container to be removed.
-
-This method can be used only if the component is in initialized state. This method can be used only when the component has been added to DOM.
+Removes menu item container from menu. If param type is string, param is considered to be the id of the item container to be removed. If param type is number, param is considered to be the ordinal index of the item container to be removed.
 
 If param is omitted, the last item container shall be removed.
+
+This method can be used only when the component has been added to DOM.
+
