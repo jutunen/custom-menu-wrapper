@@ -105,6 +105,8 @@ In the example above, the content is centered as flex items with align-items and
    var menu = document.createElement('custom-menu-wrapper')
    var heading = document.createElement('div')
    var item = document.createElement('div')
+   heading.innerHTML = 'Menu'
+   item.innerHTML = 'Item 1'
    heading.classList.add('heading')
    item.classList.add('item')
    menu.appendChild(menu)
@@ -118,33 +120,82 @@ In the example above, the content is centered as flex items with align-items and
 #### mode
 
 Defines how the menu can be toggled.
-Menu can be toggled by click or hover.
+
+Menu can be toggled by clicking or hovering on it.
+
+Attribute value must be either 'click' or 'hover'.
+
+Default value is 'click'.
+
+HTML example:
+
+    ```html
+     <custom-menu-wrapper mode='hover'>
+    ```
 
 #### position
 
 Defines initial menu item position in relation to menu heading.
 
+Attribute value must be either 'bottom' or 'right'.
+
+Default value is 'bottom'.
+
+HTML example:
+
+    ```html
+     <custom-menu-wrapper position='right'>
+    ```
+
 #### direction
 
 Defines menu opening direction.
+
+Attribute value must be either 'down' or 'right'.
+
+Default value is 'down'.
+
+HTML example:
+
+    ```html
+     <custom-menu-wrapper direction='right'>
+    ```
 
 #### init-state-open
 
 If defined, menu shall be initially displayed in open state.
 
-#### menu-close-timeout
+This attribute is a boolean attribute, also known as a valueless attribute.
 
-When menu is in hover mode, this value defines how long the menu will be open after the pointer is not above the menu anymore.
+HTML example:
+
+    ```html
+     <custom-menu-wrapper init-state-open>
+    ```
+
+#### closing-delay
+
+This attribute applies only when menu is in hover mode.
+
+Attribute value defines how long the menu will be open after the pointer is not above the menu anymore.
+
+Attribute's unit is milliseconds and default value is 500.
+
+HTML example:
+
+    ```html
+     <custom-menu-wrapper closing-delay='0'>
+    ```
 
 #### close-submenus-on-closing
 
-Defines whether the submenus will be set to closed state when the menu is closed by custom event or by losing focus.
+Defines whether the submenus will be closed when the menu is closed by custom event or by losing focus.
 
 #### close-submenus-on-heading-click
 
-Defines whether the submenus will be set to closed state when the menu is closed by heading click.
+Defines whether the submenus will be closed when the menu is closed by heading click.
 
-#### menu-open-class
+#### heading-class
 
 Defines the name of the class that shall be assigned to the heading when the menu is open.
 
