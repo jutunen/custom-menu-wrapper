@@ -1,4 +1,4 @@
-https://github.com/jutunen/wac-exercises/tree/master/car-mileage# custom-menu-wrapper
+# custom-menu-wrapper
 A web component that wraps HTML elements and forms a drop-down menu out of them.
 
 ## Features
@@ -117,7 +117,7 @@ In the example above, the content is centered as flex items with *align-items* a
 
 ## Custom attributes
 
-#### mode
+### mode
 
 Defines how the menu can be toggled.
 
@@ -133,7 +133,7 @@ HTML example:
 <custom-menu-wrapper mode='hover'>
 ```
 
-#### position
+### position
 
 Defines initial menu item position in relation to menu heading.
 
@@ -147,7 +147,7 @@ HTML example:
 <custom-menu-wrapper position='right'>
 ```
 
-#### direction
+### direction
 
 Defines menu opening direction.
 
@@ -161,7 +161,7 @@ HTML example:
 <custom-menu-wrapper direction='right'>
 ```
 
-#### init-state-open
+### init-state-open
 
 If defined, menu shall be initially displayed in open state.
 
@@ -173,7 +173,7 @@ HTML example:
 <custom-menu-wrapper init-state-open>
 ```
 
-#### closing-delay
+### closing-delay
 
 This attribute applies only when menu is in hover mode.
 
@@ -187,7 +187,7 @@ HTML example:
 <custom-menu-wrapper closing-delay='1000'>
 ```
 
-#### close-submenus-on-closing
+### close-submenus-on-closing
 
 Defines whether the submenus will be closed when the menu is closed by custom event or by losing focus.
 
@@ -201,19 +201,19 @@ HTML example:
 <custom-menu-wrapper close-submenus-on-closing='false'>
 ```
 
-#### close-submenus-on-heading-click
+### close-submenus-on-heading-click
 
 Defines whether the submenus will be closed when the menu is closed by heading click.
 
-#### heading-class
+### heading-class
 
 Defines the name of the class that shall be assigned to the heading when the menu is open.
 
-#### item
+### item
 
 Defines new item class name, if the default class name 'item' can not be used.
 
-#### heading
+### heading
 
 Defines new heading class name, if the default class name 'heading' can not be used.
 
