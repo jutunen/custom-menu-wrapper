@@ -109,8 +109,8 @@ In the example above, the content is centered as flex items with *align-items* a
    item.innerHTML = 'Item 1'
    heading.classList.add('heading')
    item.classList.add('item')
-   menu.appendChild(menu)
    menu.appendChild(heading)
+   menu.appendChild(item)   
    document.body.appendChild(menu)
    ```
 
@@ -184,7 +184,7 @@ Default value is 500.
 HTML example:
 
 ```html
-<custom-menu-wrapper closing-delay='1000'>
+<custom-menu-wrapper mode='hover' closing-delay='1000'>
 ```
 
 ### close-submenus-on-closing
@@ -311,3 +311,37 @@ If param is omitted, the last item container shall be removed.
 
 This method can be used only when the component has been added to DOM.
 
+## Importing menu content as component
+
+Menu content can be imported from a file as a web component.
+
+Example:
+
+ ```html
+     <script src="my-custom-menu-content.js"></script>
+
+     <custom-menu-wrapper>
+        <my-custom-menu-content />
+     </custom-menu-wrapper>    
+ ```
+
+See example file my-custom-menu-content.js in directory.
+
+## Building
+Unminified scripts in the dist folder can be used and modified as such, there are no build scripts available for them.
+
+Building is done by executing the minifier script minify.cmd, which is a Linux bash shell script.
+
+Minify.cmd can be found from dist folder.
+
+Building (minifying) requires [terser](https://github.com/terser/terser) command line tool to be installed. It can be installed with following command:
+```console
+ npm install terser -g
+   ```
+## Contributing
+Questions, suggestions and bug reports are welcome. Safari testing would be nice.
+
+## License
+Copyright (c) 2020 Jussi Utunen
+
+Licensed under the MIT License
