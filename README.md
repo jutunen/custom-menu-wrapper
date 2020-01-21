@@ -197,7 +197,7 @@ Attribute value must be either 'true' or 'false'.
 
 Default value is 'true'.
 
-Higher level attribute setting overriddes submenu attribute settings when menu is closed due to losing focus.
+Higher level attribute setting overriddes submenu attribute setting when menu is closed by lost focus.
 
 HTML example:
 
@@ -303,7 +303,7 @@ If component has been added to DOM, items can be removed also with components de
 
 ### addItem( element, index )
 
-Adds new menu item container. The element parameter must be a div element that contains the actual item content. The index parameter defines the place of the new item to be added. Index 0 adds item as first. If index parameter is omitted, item is added as last.
+Adds new menu item container. The element parameter must be a div element that contains the actual item content. The index parameter defines the place of the new item to be added. Index 0 adds item as first. If index parameter is omitted, item is added as last. Index parameter must be integer.
 
 This method can be used only when the component has been added to DOM.
 
