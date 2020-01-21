@@ -175,9 +175,9 @@ HTML example:
 
 ### closing-delay
 
-This attribute applies only when the menu is in hover mode.
+Defines how many milliseconds the menu will be open after the pointer is not above the menu anymore.
 
-Attribute value defines how many milliseconds the menu will be open after the pointer is not above the menu anymore.
+This attribute applies only when the menu is in hover mode.
 
 Default value is 500.
 
@@ -189,15 +189,13 @@ HTML example:
 
 ### close-submenus-on-closing
 
-This attribute applies only when the menu is in click mode.
-
 Defines whether the submenus will be closed when the menu is closed by custom event or by losing focus.
+
+This attribute applies only when the menu is in click mode.
 
 Attribute value must be either 'true' or 'false'.
 
 Default value is 'true'.
-
-Higher level attribute setting overriddes submenu attribute setting when menu is closed by lost focus.
 
 HTML example:
 
@@ -208,6 +206,8 @@ HTML example:
 ### close-submenus-on-heading-click
 
 Defines whether the submenus will be closed when the menu is closed by heading click.
+
+This attribute applies only when the menu is in click mode.
 
 Attribute value must be either 'true' or 'false'.
 
@@ -253,9 +253,10 @@ Defines new heading class name, if the default class name 'heading' can not be u
 
 Following events cause menu closing:
 
- * click outside menu items (on click mode only)
+ * item (or its descentant?) loses focus due to click outside menu area
+ * heading loses focus due to click outside menu area (on click mode only)
  * click on the heading (on click mode only)
- * hover outside menu items or heading for longer than closing-delay time (on hover mode only)
+ * hover outside menu area for longer than closing-delay time (on hover mode only)
  * menuClose or rootMenuClose event is dispatched from menu item or its descentant
 
 #### Dispatching menuClose event
