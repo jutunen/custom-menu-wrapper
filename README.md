@@ -125,7 +125,7 @@ Menu can be toggled by clicking or hovering on it.
 
 Attribute value must be either 'click' or 'hover'.
 
-Default value is 'click'.
+Default mode is 'click'.
 
 HTML example:
 
@@ -139,7 +139,7 @@ Defines initial menu item position in relation to menu heading.
 
 Attribute value must be either 'bottom' or 'right'.
 
-Default value is 'bottom'.
+Default position is 'bottom'.
 
 HTML example:
 
@@ -153,7 +153,7 @@ Defines menu opening direction.
 
 Attribute value must be either 'down' or 'right'.
 
-Default value is 'down'.
+Default direction is 'down'.
 
 HTML example:
 
@@ -179,7 +179,7 @@ Defines how many milliseconds the menu will be open after the pointer is not abo
 
 This attribute applies only when the menu is in hover mode.
 
-Default value is 500.
+Default delay is 500 ms.
 
 HTML example:
 
@@ -226,6 +226,8 @@ Defines the name of the class that shall be assigned to heading when the menu is
 The class shall be removed from heading when the menu is closed.
 
 This attribute can be used to change the heading style when the menu is toggled.
+
+This attribute does not have a default value.
 
 CSS example:
  
