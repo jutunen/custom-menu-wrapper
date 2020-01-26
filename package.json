@@ -1,0 +1,33 @@
+{
+  "name": "custom-menu-wrapper",
+  "version": "0.0.1",
+  "description": "A web component that wraps HTML elements and forms a drop-down menu out of them.",
+  "main": "dist/custom-menu-wrapper-node.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/custom-menu-wrapper-node.min.js",
+    "dist/custom-menu-wrapper-node.js",
+    "dist/minify.cmd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jutunen/custom-menu-wrapper.git"
+  },
+  "keywords": [
+    "web-component",
+    "custom-element",
+    "html",
+    "javascript",
+    "drop-down",
+    "dropdown",
+    "menu"
+  ],
+  "author": "Jussi Utunen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jutunen/custom-menu-wrapper/issues"
+  },
+  "homepage": "https://github.com/jutunen/custom-menu-wrapper#readme"
+}
