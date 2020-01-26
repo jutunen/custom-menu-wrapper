@@ -163,7 +163,7 @@ HTML example:
 
 ### init-state-open
 
-If defined, menu shall be initially displayed in open state.
+If defined, the menu will initially be displayed in open state.
 
 This attribute is a boolean attribute, also known as a valueless attribute.
 
@@ -221,9 +221,9 @@ HTML example:
 
 ### heading-class
 
-Defines the name of the class that shall be assigned to heading when the menu is opened.
+Defines the name of the class that will be assigned to heading when the menu is opened.
 
-The class shall be removed from heading when the menu is closed.
+The class will be removed from heading when the menu is closed.
 
 This attribute can be used to change the heading style when the menu is toggled.
 
