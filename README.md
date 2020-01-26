@@ -191,32 +191,32 @@ HTML example:
 
 Defines whether the submenus will be closed when the menu is closed by custom event or by losing focus.
 
+This attribute is a boolean attribute, also known as a valueless attribute.
+
 This attribute applies only when the menu is in click mode.
 
-Attribute value must be either 'true' or 'false'.
-
-Default value is 'true'.
+By default, the component will not close submenus on closing.
 
 HTML example:
 
 ```html
-<custom-menu-wrapper close-submenus-on-closing='false'>
+<custom-menu-wrapper close-submenus-on-closing>
 ```
 
 ### close-submenus-on-heading-click
 
 Defines whether the submenus will be closed when the menu is closed by heading click.
 
+This attribute is a boolean attribute, also known as a valueless attribute.
+
 This attribute applies only when the menu is in click mode.
 
-Attribute value must be either 'true' or 'false'.
-
-Default value is 'true'.
+By default, the component will not close submenus on heading click.
 
 HTML example:
 
 ```html
-<custom-menu-wrapper close-submenus-on-heading-click='false'>
+<custom-menu-wrapper close-submenus-on-heading-click>
 ```
 
 ### heading-class
@@ -255,7 +255,7 @@ Defines new heading class name, if the default class name 'heading' can not be u
 
 Following events cause menu closing:
 
- * item (or its descentant?) loses focus due to click outside menu area
+ * item or its descentant loses focus due to click outside menu area
  * heading loses focus due to click outside menu area (on click mode only)
  * click on the heading (on click mode only)
  * hover outside menu area for longer than closing-delay time (on hover mode only)
@@ -320,21 +320,26 @@ This method can be used only when the component has been added to DOM.
 
 ## Importing menu content as component
 
-Menu content can be imported from a file as a web component.
+Menu content can be imported from a file as a custom element.
 
 Example:
 
  ```html
-     <script src="my-custom-menu-content.js"></script>
+     <script src="my-menu-content.js"></script>
 
      <custom-menu-wrapper>
-        <my-custom-menu-content />
+        <my-menu-content />
      </custom-menu-wrapper>    
  ```
 
-See example file my-custom-menu-content.js in directory.
+Element name can be freely chosen as long as it adheres to custom element naming rules.
+
+The element must have *menuContent* attribute that shall contain the menu content HTML definition.
+
+See example file *my-menu-content.js* in *menu-content-component* folder.
 
 ## Building
+
 Unminified scripts in the dist folder can be used and modified as such, there are no build scripts available for them.
 
 Building is done by executing the minifier script minify.cmd, which is a Linux bash shell script.
@@ -346,9 +351,11 @@ Building (minifying) requires [terser](https://github.com/terser/terser) command
  npm install terser -g
    ```
 ## Contributing
+
 Questions, suggestions and bug reports are welcome. Safari testing would be nice.
 
 ## License
+
 Copyright (c) 2020 Jussi Utunen
 
 Licensed under the MIT License
