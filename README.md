@@ -1,10 +1,15 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/custom-menu-wrapper)
+[![npm version](https://badge.fury.io/js/custom-menu-wrapper.svg)](https://badge.fury.io/js/custom-menu-wrapper)
+[![minified](https://badgen.net/badge/minified/4.3%20kB/blue)](https://badgen.net/badge/minified/4.3%20kB/blue)
+[![minified & compressed](https://badgen.net/badge/minified%20&%20compressed/1.9%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/1.9%20kB/blue)
+
 # custom-menu-wrapper
 A web component that wraps HTML elements and forms a drop-down menu out of them.
 
 Live demo available [here.](http://51.38.51.120/custommenuwrapper/)
 
 ## Features
-Custom menu component is a standalone vanilla JS web component that does not use shadow DOM.
+Custom-menu-wrapper is a standalone vanilla JS web component that does not use shadow DOM.
 
 Component features include:
 - content agnostic: menu items should be able to contain any HTML
