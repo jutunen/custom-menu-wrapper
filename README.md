@@ -3,6 +3,8 @@
 [![minified](https://badgen.net/badge/minified/4.3%20kB/blue)](https://badgen.net/badge/minified/4.3%20kB/blue)
 [![minified & compressed](https://badgen.net/badge/minified%20&%20compressed/1.9%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/1.9%20kB/blue)
 
+# Note! This project has been migrated to https://github.com/vanillawc/wc-menu-wrapper. Custom-menu-wrapper won't be maintained anymore. Please use wc-menu-wrapper instead.
+
 # custom-menu-wrapper
 A web component that wraps HTML elements and forms a drop-down menu out of them.
 
@@ -36,9 +38,9 @@ HTML example:
         <div class='item'> 3rd item </div>
      </custom-menu-wrapper>    
  ```
- 
+
  Style example:
- 
+
  ```css
    .item, .heading {
     background-color: lightblue;
@@ -237,7 +239,7 @@ This attribute can be used to change the heading style when the menu is toggled.
 This attribute does not have a default value.
 
 CSS example:
- 
+
  ```css
   .menu-open-heading {
     background-color: #black;
@@ -295,7 +297,7 @@ Example:
   element.dispatchEvent(new CustomEvent('rootMenuClose'))
 ```
 
-  In the example above, the element must be a descendant of menu item element. Unlike in the case of menuClose event, there is no need for second parameter on CustomEvent. 
+  In the example above, the element must be a descendant of menu item element. Unlike in the case of menuClose event, there is no need for second parameter on CustomEvent.
 
 ## Adding and removing menu items
 
