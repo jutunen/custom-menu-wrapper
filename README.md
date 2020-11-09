@@ -1,14 +1,8 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/custom-menu-wrapper)
-[![npm version](https://badge.fury.io/js/custom-menu-wrapper.svg)](https://badge.fury.io/js/custom-menu-wrapper)
-[![minified](https://badgen.net/badge/minified/4.3%20kB/blue)](https://badgen.net/badge/minified/4.3%20kB/blue)
-[![minified & compressed](https://badgen.net/badge/minified%20&%20compressed/1.9%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/1.9%20kB/blue)
 
 # Note! This project has been migrated to https://github.com/vanillawc/wc-menu-wrapper. Custom-menu-wrapper won't be maintained anymore. Please use wc-menu-wrapper instead.
 
 # custom-menu-wrapper
 A web component that wraps HTML elements and forms a drop-down menu out of them.
-
-Live demo available [here.](http://51.38.51.120/custommenuwrapper/)
 
 ## Features
 Custom-menu-wrapper is a standalone vanilla JS web component that does not use shadow DOM.
@@ -90,39 +84,6 @@ In the example above, the content is centered as flex items with *align-items* a
         <div class='item'> 1st item </div>
      </custom-menu-wrapper>    
     ```
-## Including the component from NPM
-
-1. Install and import polyfill, this is not needed for modern browsers:
-
-   See https://www.npmjs.com/package/@webcomponents/custom-elements
-
-2. Install custom-menu-wrapper NPM package:
-
-    ```console
-    npm i custom-menu-wrapper
-    ```
-
-3. Import custom element:
-
-    ```javascript
-    import 'custom-menu-wrapper'
-    ```
-
-4. Start using it:
-
-   ```javascript
-   var menu = document.createElement('custom-menu-wrapper')
-   var heading = document.createElement('div')
-   var item = document.createElement('div')
-   heading.innerHTML = 'Menu'
-   item.innerHTML = 'Item 1'
-   heading.classList.add('heading')
-   item.classList.add('item')
-   menu.appendChild(heading)
-   menu.appendChild(item)   
-   document.body.appendChild(menu)
-   ```
-
 
 ## Attributes
 
